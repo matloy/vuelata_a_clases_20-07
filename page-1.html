@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+    <title>Primera</title>
+  </head>
+  <body>
+  <!--Bibliotecas P5.JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.min.js"></script>
+  <!--script P5.JS-->
+  <script>
+    
+      var squa = {
+          X:0,
+          X2:0,
+          X3:0,
+          Y:0,
+          Y2:0,
+          Y3:0,
+          R:0,
+          G:0,
+          B:0,
+          speed:1,
+          speed2:1,
+          speed3:1
+      }
+      
+  function setup(){
+    var w = windowWidth-10, h = 380;
+    var canvas = createCanvas(w,h);
+      background(225);
+      
+      //text1
+      fill(0,100,255);
+      textSize(22);
+      text("Consumo de café mundial",220,30);
+      
+      //text2
+      fill(0,100,255);
+      textSize(16);
+      text("Tres Mayores Consumidores",245,50);
+      
+      //text3
+      fill(0,100,255);
+      textSize(18);
+      text("Europa (51.860)",280,100);
+      
+      //text4
+      fill(0,100,255);
+      textSize(18);
+      text("Asia & Oceanía (34.680)",280,180);
+      
+      //text5
+      fill(0,100,255);
+      textSize(18);
+      text("Ámerica del Norte (29.564)",280,260);
+      
+      
+      //text6
+      fill(0,100,255);
+      textSize(12);
+      text("Datos obtenidos de: http://www.ico.org/ ",10,360);
+  }
+  function draw(){
+    //background(225);
+      
+      //text1
+      //fill(0,100,255);
+      //textSize(22);
+      //text("dato1",280,30);
+      
+      
+      
+      //rectEU
+      fill(squa.R+104,squa.G+74,squa.B+18);
+      noStroke();
+      rect(squa.X,squa.Y+70,10,40);
+      
+      //rectA&O
+      fill(squa.R+139,squa.G+107,squa.B+50);
+      noStroke();
+      rect(squa.X2,squa.Y+150,10,40);
+      
+      //rectNA
+      fill(squa.R+189,squa.G+132,squa.B+27);
+      noStroke();
+      rect(squa.X3,squa.Y+230,10,40);
+      
+
+      if (squa.X > 250){squa.speed = 0;} squa.X = squa.X + squa.speed;
+      if (squa.X2 > 150){squa.speed2 = 0;} squa.X2 = squa.X2 + squa.speed2;
+      if (squa.X3 > 100){squa.speed3 = 0;} squa.X3 = squa.X3 + squa.speed3;
+      
+  }    
+  </script>
+  </body>
+</html>
